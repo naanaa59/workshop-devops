@@ -4,10 +4,11 @@ on:
   push
 
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v4
-    - run: |
-            echo "Repository: ${{ github.repository }}"
-            echo "Branch: &{{ github.ref_name }}"
-            echo "Commit SHA: ${{ github.sha }}"
+  github-context:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+              echo "Repository: ${{ github.repository }}"
+              echo "Branch: &{{ github.ref_name }}"
+              echo "Commit SHA: ${{ github.sha }}"
