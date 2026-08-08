@@ -21,5 +21,5 @@ jobs:
       - run: echo "$PROJECT_NAME"
       - run: pip install pytest
       - run: python -m pytest
-      - run: echo "SALINA"
+      - run: echo "pipeline successed"
       
