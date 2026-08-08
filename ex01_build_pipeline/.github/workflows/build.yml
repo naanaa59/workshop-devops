@@ -1,0 +1,14 @@
+name: build-pipeline-wokflow
+on: 
+  push
+
+jobs:
+  build-pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: | 
+              python --version 
+              python3 --version 
+              pwd 
+              ls -la
